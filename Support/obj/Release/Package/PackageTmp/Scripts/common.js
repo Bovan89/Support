@@ -180,6 +180,9 @@ function ViewReqs(type) {
         case "3":
             data = { requestState: 3, withThisState: true };
             break;
+        case "4":
+            data = { requestState: 1, withThisState: true };
+            break;
     }
 
     $.ajax(
@@ -200,15 +203,23 @@ function ViewReqs(type) {
                         html += '</div>' + '\n';
 
                         //Select
-                        html += '<div class="col-md-12 col-lg-12 col-sm-12">' +
+                        html += '<div class="col-md-6 col-lg-6 col-sm-6">' +
                                     '<label for="filterReq">Фильтр заявок</label>' +
                                     '<select class="form-control" id="filterReq">' +
                                         '<option value="0">Все</option>' +
                                         '<option value="1">Не выполненные</option>' +
                                         '<option value="2">Выполненные</option>' +
-                                        '<option value="3">Отмененные</option>' +                                  
+                                        '<option value="3">Отмененные</option>' +
+                                        '<option value="4">Выполняются</option>' +
                                     '</select>' +
                                 '</div>';
+
+                        //Totals
+                        html += '<div class="col-md-6 col-lg-6 col-sm-6">' +
+                                    '<label for="totalCnt">Итоговое количество</label>' +
+                                    '<input type="text" class="form-control" readonly id="totalCnt" value="' + result.length + '">' +
+                                '</div>';
+                        
 
                         //Таблица
                         html += '<table class="table">' + '<thead class="thead-dark">' + '<tr>';
@@ -282,9 +293,9 @@ function ViewEmps(type) {
                         html += '<button type="button" class="btn btn-primary" id="createEmp">Нанять нового сотрудника</button>' + '\n';
                         html += '<button type="button" class="btn btn-danger" id="cancelEmp" disabled="true">Уволить</button>' + '\n';
                         html += '</div>' + '\n';
-
+                        
                         //Select
-                        html += '<div class="col-md-12 col-lg-12 col-sm-12">' +
+                        html += '<div class="col-md-6 col-lg-6 col-sm-6">' +
                                     '<label for="filterEmp">Фильтр сотрудников</label>' +
                                     '<select class="form-control" id="filterEmp">' +
                                         '<option value="0">Все</option>' +
@@ -292,6 +303,12 @@ function ViewEmps(type) {
                                         '<option value="2">Занятые</option>' +
                                         '<option value="3">Уволенные</option>' +
                                     '</select>' +
+                                '</div>';
+
+                        //Totals
+                        html += '<div class="col-md-6 col-lg-6 col-sm-6">' +
+                                    '<label for="totalCnt">Итоговое количество</label>' +
+                                    '<input type="text" class="form-control" readonly id="totalCnt" value="' + result.length + '">' +
                                 '</div>';
 
                         //Заголовок

@@ -97,3 +97,4 @@ C:\Users\pechiorinvy\Documents\Visual Studio 2015\Projects\Support\Support\bin\r
 C:\Users\pechiorinvy\Documents\Visual Studio 2015\Projects\Support\Support\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 C:\Users\pechiorinvy\Documents\Visual Studio 2015\Projects\Support\Support\obj\Debug\Support.dll
 C:\Users\pechiorinvy\Documents\Visual Studio 2015\Projects\Support\Support\obj\Debug\Support.pdb
+C:\Users\pechiorinvy\Documents\Visual Studio 2015\Projects\Support\Support\obj\Debug\Support.csprojResolveAssemblyReference.cache
